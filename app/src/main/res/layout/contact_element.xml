@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_centerVertical="true"
+    android:padding="10dp"
+    android:layout_gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:foregroundTint="@color/main_color"
+        android:src="@drawable/ic_baseline_person_green_24"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John DOE"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"/>
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profession"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

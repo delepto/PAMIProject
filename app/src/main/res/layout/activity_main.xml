@@ -76,6 +76,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/contactButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -86,20 +87,11 @@
         android:text="Contacts"
         android:textAllCaps="false"
         android:textStyle="bold"
-
         android:fontFamily="@font/montserrat"
         android:backgroundTint="@color/white"
         app:icon="@drawable/ic_baseline_supervisor_account_24"
         app:iconGravity="end"
         />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
-
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
