@@ -9,30 +9,52 @@
     android:layout_gravity="center_vertical">
 
     <ImageView
+        android:scaleType="centerCrop"
+        android:outlineProvider="background"
+        android:background="@drawable/round_outline"
+        android:id="@+id/image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:foregroundTint="@color/main_color"
-        android:src="@drawable/ic_baseline_person_green_24"/>
+        android:foregroundTint="@color/main_color" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_vertical"
         android:layout_marginLeft="10dp">
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="John DOE"
             android:fontFamily="@font/montserrat"
             android:textColor="@color/black"/>
         <TextView
+            android:id="@+id/profession"
             android:fontFamily="@font/montserrat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profession"/>
+
+
     </LinearLayout>
 
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+    <ImageButton
+        android:id="@+id/delete_user"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        />
 
 
 </LinearLayout>
