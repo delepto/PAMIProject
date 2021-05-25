@@ -6,74 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:background="@drawable/toolbar_background"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar1"
+            layout="@layout/main_toolbar"
+            android:visibility="visible"/>
+
+        <include
+            android:id="@+id/toolbar2"
+            layout="@layout/trends_toolbar"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+    </FrameLayout>
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
-
-            <ImageButton
-                android:id="@+id/burger"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_menu_24"
-                android:background="@android:color/transparent"/>
-
-            <LinearLayout
-                android:id="@+id/appTitle"
-                app:layout_constraintLeft_toRightOf="@id/burger"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="30dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Welcome to"
-                    android:textColor="@color/white"
-                    android:textSize="14dp" />
-                <TextView
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/montserrat"
-                    android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MoodSafe"/>
-            </LinearLayout>
-
-            <ImageButton
-                android:layout_marginRight="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/profile"
-                android:background="@drawable/ic_baseline_settings_24"/>
-            <ImageButton
-                android:layout_marginRight="30dp"
-                android:id="@+id/profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:background="@drawable/ic_baseline_person_24"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/contactButton"
