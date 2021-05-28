@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Anne Weber",
+      "profession": "Wife",
+      "image": "anne_peres_plsf6obtgms_unsplash",
+      "active": "true"
+    },
+    {
+      "name": "Sandra Wagne",
+      "profession": "Mother",
+      "image": "damir_bosnjak_vq2l7t5qt_8_unsplash",
+      "active": "true"
+    }
+  ]
+}
